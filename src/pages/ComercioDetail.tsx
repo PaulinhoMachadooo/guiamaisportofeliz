@@ -2,7 +2,6 @@ import React from "react";
 import { useParams, Link } from "react-router-dom";
 import {
   ArrowLeft,
-  Star,
   MapPin,
   Clock,
   Phone,

@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Star, MapPin, Clock, Phone } from "lucide-react";
+import { MapPin, Clock, Phone } from "lucide-react";
 import { Comercio } from "../types";
 
 interface ComercioCardProps {
@@ -61,9 +61,7 @@ const ComercioCard: React.FC<ComercioCardProps> = ({ comercio }) => {
         )}
 
         <div className="mt-3 flex items-center justify-between">
-          <span className="text-xs text-gray-500">
-            {comercio.totalAvaliacoes} avaliações
-          </span>
+     
           <span className="text-blue-900 text-sm font-medium group-hover:text-blue-00">
             Ver detalhes →
           </span>

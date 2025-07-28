@@ -1,13 +1,13 @@
-import React, { useState } from 'react';
-import { Search, MapPin } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import React, { useState } from "react";
+import { Search, MapPin } from "lucide-react";
+import { Link } from "react-router-dom";
 
 interface HeaderProps {
   onSearch?: (query: string) => void;
 }
 
 const Header: React.FC<HeaderProps> = ({ onSearch }) => {
-  const [searchValue, setSearchValue] = useState('');
+  const [searchValue, setSearchValue] = useState("");
 
   const handleSearchSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -19,15 +19,15 @@ const Header: React.FC<HeaderProps> = ({ onSearch }) => {
   const handleSearchChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const value = e.target.value;
     setSearchValue(value);
-    
+
     // Para busca em tempo real nas outras páginas
     if (onSearch && !value.trim()) {
-      onSearch('');
+      onSearch("");
     }
   };
 
   const handleKeyPress = (e: React.KeyboardEvent<HTMLInputElement>) => {
-    if (e.key === 'Enter' && onSearch && searchValue.trim()) {
+    if (e.key === "Enter" && onSearch && searchValue.trim()) {
       onSearch(searchValue.trim());
     }
   };
@@ -37,7 +37,7 @@ const Header: React.FC<HeaderProps> = ({ onSearch }) => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <Link to="/" className="flex items-center space-x-2">
-            <div className="bg-gradient-to-r from-blue-600 to-blue-700 p-2 rounded-lg">
+            <div className="bg-[#ff5e00] p-2 rounded-lg">
               <MapPin className="h-6 w-6 text-white" />
             </div>
             <div>
@@ -45,7 +45,7 @@ const Header: React.FC<HeaderProps> = ({ onSearch }) => {
               <p className="text-xs text-gray-500">Comércios locais</p>
             </div>
           </Link>
-          
+
           {onSearch && (
             <div className="flex-1 max-w-lg mx-8">
               <form onSubmit={handleSearchSubmit} className="relative">
@@ -61,12 +61,18 @@ const Header: React.FC<HeaderProps> = ({ onSearch }) => {
               </form>
             </div>
           )}
-          
+
           <nav className="hidden md:flex space-x-6">
-            <Link to="/" className="text-gray-700 hover:text-blue-600 transition-colors">
+            <Link
+              to="/"
+              className="text-gray-700 hover:text-blue-600 transition-colors"
+            >
               Início
             </Link>
-            <Link to="/categorias" className="text-gray-700 hover:text-blue-600 transition-colors">
+            <Link
+              to="/categorias"
+              className="text-gray-700 hover:text-blue-600 transition-colors"
+            >
               Categorias
             </Link>
           </nav>

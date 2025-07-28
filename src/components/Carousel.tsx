@@ -19,7 +19,7 @@ const slides: Slide[] = [
     //description: 'Sabores únicos e experiências gastronômicas incríveis te aguardam',
     //buttonText: 'Ver Restaurantes',
     //buttonLink: '/categoria/restaurantes'
-  },*/
+  },
   {
     id: 2,
     image:
@@ -28,7 +28,7 @@ const slides: Slide[] = [
     // description: 'Profissionais qualificados para atender todas as suas necessidades',
     //buttonText: 'Ver Serviços',
     //buttonLink: '/categoria/servicos'
-  },
+  },*/
   {
     id: 3,
     image:

@@ -2,6 +2,20 @@ import { Comercio, Categoria } from "../types";
 
 export const categorias: Categoria[] = [
   {
+    id: "academia",
+    nome: "Academia",
+    icone: "Dumbbell",
+    cor: "bg-yellow-500",
+    descricao: "Academia, fitness e bem-estar",
+  },
+  {
+    id: "açougue",
+    nome: "Açougue",
+    icone: "Meat",
+    cor: "bg-red-300",
+    descricao: "Açougue, carnes e frios",
+  },
+  {
     id: "restaurantes",
     nome: "Restaurantes",
     icone: "UtensilsCrossed",
@@ -48,7 +62,8 @@ export const categorias: Categoria[] = [
 export const comercios: Comercio[] = [
   // Restaurantes
   {
-    id: "1",
+    /*{
+    id: "sabores da terra",
     nome: "Restaurante Sabores da Terra",
     categoria: "restaurantes",
     descricao:
@@ -119,8 +134,8 @@ export const comercios: Comercio[] = [
     email: "suporte@techfix.com.br",
     website: "www.techfix.com.br",
     horarios: "Seg-Sex: 8h às 18h, Sáb: 8h às 12h",
-    avaliacao: 4.9,
-    totalAvaliacoes: 312,
+    avaliacao: 3.0,
+    totalAvaliacoes: 100,
     imagem:
       "https://images.pexels.com/photos/518244/pexels-photo-518244.jpeg?auto=compress&cs=tinysrgb&w=800",
     especialidades: ["Smartphones", "Notebooks", "Eletrônicos"],
@@ -200,8 +215,8 @@ export const comercios: Comercio[] = [
     email: "agendamento@clinicasaolucas.com.br",
     website: "www.clinicasaolucas.com.br",
     horarios: "Seg-Sex: 7h às 19h, Sáb: 7h às 12h",
-    avaliacao: 4.7,
-    totalAvaliacoes: 178,
+    avaliacao: 4.9,
+    totalAvaliacoes: 900,
     imagem:
       "https://images.pexels.com/photos/236380/pexels-photo-236380.jpeg?auto=compress&cs=tinysrgb&w=800",
     especialidades: ["Clínica Geral", "Cardiologia", "Pediatria"],
@@ -305,7 +320,8 @@ export const comercios: Comercio[] = [
     especialidades: ["Inglês", "Espanhol", "Francês"],
     instagram: "@cursoglobal",
     whatsapp: "11987654331",
-  }, {
+  },
+  {
     id: "14",
     nome: "Curso de Idiomas Global",
     categoria: "educacao",
@@ -323,5 +339,6 @@ export const comercios: Comercio[] = [
     especialidades: ["Inglês", "Espanhol", "Francês"],
     instagram: "@cursoglobal",
     whatsapp: "11987654331",
+  },*/
   },
 ];
