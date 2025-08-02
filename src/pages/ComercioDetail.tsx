@@ -1,5 +1,5 @@
 import React from "react";
-import { useParams, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import {
   ArrowLeft,
   MapPin,
@@ -12,7 +12,9 @@ import {
   MessageCircle,
 } from "lucide-react";
 import * as Icons from "lucide-react";
+import { useParams } from "react-router-dom";
 import Header from "../components/Header";
+import ImageGallery from "../components/ImageGallery";
 import { comercios, categorias } from "../data/comercios";
 
 const ComercioDetail: React.FC = () => {
@@ -67,7 +69,7 @@ const ComercioDetail: React.FC = () => {
       <Header />
 
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <Link
+        <Link data-aos="fade-right"
           to="/"
           className="inline-flex items-center text-gray-600 hover:text-gray-900 mb-6"
         >
@@ -75,7 +77,7 @@ const ComercioDetail: React.FC = () => {
           Voltar
         </Link>
 
-        <div className="bg-white rounded-xl shadow-lg overflow-hidden">
+        <div className="bg-white rounded-xl shadow-lg overflow-hidden" data-aos="fade-up">
           <div className="relative h-64 sm:h-80">
             <img
               src={comercio.imagem}
@@ -100,8 +102,11 @@ const ComercioDetail: React.FC = () => {
             </div>
           </div>
 
-          <div className="p-6">
-            <div className="flex items-center justify-between mb-6"></div>
+          <div className="p-6" data-aos="fade-up" data-aos-delay="200">
+            {/* Galeria de Imagens */}
+            {comercio.galeria && comercio.galeria.length > 0 && (
+              <ImageGallery images={comercio.galeria} businessName={comercio.nome} />
+            )}
 
             <div className="mb-6">
               <h2 className="text-xl font-semibold text-gray-900 mb-3">
@@ -112,7 +117,7 @@ const ComercioDetail: React.FC = () => {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6" data-aos="fade-up" data-aos-delay="300">
               <div>
                 <h3 className="text-lg font-semibold text-gray-900 mb-3">
                   Informações de Contato
@@ -211,7 +216,7 @@ const ComercioDetail: React.FC = () => {
             </div>
 
             {comercio.especialidades && comercio.especialidades.length > 0 && (
-              <div className="mb-6">
+              <div className="mb-6" data-aos="fade-up" data-aos-delay="400">
                 <h3 className="text-lg font-semibold text-gray-900 mb-3">
                   Especialidades
                 </h3>
@@ -228,7 +233,7 @@ const ComercioDetail: React.FC = () => {
               </div>
             )}
 
-            <div className="flex space-x-4 pt-6 border-t border-gray-200">
+            <div className="flex space-x-4 pt-6 border-t border-gray-200" data-aos="fade-up" data-aos-delay="500">
               <a
                 href={`tel:${comercio.telefone}`}
                 className="flex-1 bg-blue-600 text-white text-center py-3 rounded-lg hover:bg-blue-700 transition-colors font-medium"

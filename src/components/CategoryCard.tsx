@@ -15,6 +15,8 @@ const CategoryCard: React.FC<CategoryCardProps> = ({ categoria, comerciosCount }
     <Link
       to={`/categoria/${categoria.id}`}
       className="group block p-2 bg-white rounded-xl shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
+      data-aos="zoom-in"
+      data-aos-delay="100"
     >
       <div className="flex items-center space-x-4">
         <div className={`${categoria.cor} p-3 rounded-lg group-hover:scale-110 transition-transform duration-300`}>

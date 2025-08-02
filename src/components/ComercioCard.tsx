@@ -12,6 +12,8 @@ const ComercioCard: React.FC<ComercioCardProps> = ({ comercio }) => {
     <Link
       to={`/comercio/${comercio.id}`}
       className="group block bg-white rounded-xl shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1 overflow-hidden"
+      data-aos="fade-up"
+      data-aos-delay="150"
     >
       <div className="relative h-48 overflow-hidden">
         <img
