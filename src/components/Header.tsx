@@ -1,6 +1,7 @@
 import React, { useState } from "react";
-import { Search, MapPin } from "lucide-react";
+import { Search } from "lucide-react";
 import { Link } from "react-router-dom";
+import logo from "../assets/logo.png"; // Importando o logo, se necessário
 
 interface HeaderProps {
   onSearch?: (query: string) => void;
@@ -37,9 +38,7 @@ const Header: React.FC<HeaderProps> = ({ onSearch }) => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <Link to="/" className="flex items-center space-x-2">
-            <div className="bg-[#ff5e00] p-2 rounded-lg">
-              <MapPin className="h-6 w-6 text-white" />
-            </div>
+            <img src={logo} className="h-12 w-auto" alt="Guia Mais logo" />
             <div>
               <h1 className="text-xl font-bold text-[#112342]">GUIA+</h1>
               <p className="text-xs text-gray-500">Comércios locais</p>
@@ -52,7 +51,7 @@ const Header: React.FC<HeaderProps> = ({ onSearch }) => {
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-5 w-5" />
                 <input
                   type="text"
-                  placeholder="Buscar comércios, categorias..."
+                  placeholder="Buscar..."
                   className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                   value={searchValue}
                   onChange={handleSearchChange}
@@ -67,13 +66,13 @@ const Header: React.FC<HeaderProps> = ({ onSearch }) => {
               to="/"
               className="text-gray-700 hover:text-blue-600 transition-colors"
             >
-              Início
+              HOME
             </Link>
             <Link
               to="/categorias"
               className="text-gray-700 hover:text-blue-600 transition-colors"
             >
-              Categorias
+              CATEGORIAS
             </Link>
           </nav>
         </div>

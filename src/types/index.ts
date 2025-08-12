@@ -15,6 +15,7 @@ export interface Comercio {
   instagram?: string;
   facebook?: string;
   whatsapp?: string;
+  mapa?: string;
 }
 
 export interface Categoria {

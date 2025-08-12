@@ -10,6 +10,7 @@ import {
   Instagram,
   Facebook,
   MessageCircle,
+  Map,
 } from "lucide-react";
 import * as Icons from "lucide-react";
 import { useParams } from "react-router-dom";
@@ -63,13 +64,22 @@ const ComercioDetail: React.FC = () => {
       window.open(`https://facebook.com/${comercio.facebook}`, "_blank");
     }
   };
+  const handleMapClick = () => {
+    if (comercio.mapa) {
+      window.open(
+        `https://www.google.com/maps/search/?api=1&query=${comercio.mapa}`,
+        "_blank"
+      );
+    }
+  };
 
   return (
     <div className="min-h-screen bg-gray-50">
       <Header />
 
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <Link data-aos="fade-right"
+        <Link
+          data-aos="fade-right"
           to="/"
           className="inline-flex items-center text-gray-600 hover:text-gray-900 mb-6"
         >
@@ -77,7 +87,10 @@ const ComercioDetail: React.FC = () => {
           Voltar
         </Link>
 
-        <div className="bg-white rounded-xl shadow-lg overflow-hidden" data-aos="fade-up">
+        <div
+          className="bg-white rounded-xl shadow-lg overflow-hidden"
+          data-aos="fade-up"
+        >
           <div className="relative h-64 sm:h-80">
             <img
               src={comercio.imagem}
@@ -105,7 +118,10 @@ const ComercioDetail: React.FC = () => {
           <div className="p-6" data-aos="fade-up" data-aos-delay="200">
             {/* Galeria de Imagens */}
             {comercio.galeria && comercio.galeria.length > 0 && (
-              <ImageGallery images={comercio.galeria} businessName={comercio.nome} />
+              <ImageGallery
+                images={comercio.galeria}
+                businessName={comercio.nome}
+              />
             )}
 
             <div className="mb-6">
@@ -117,7 +133,11 @@ const ComercioDetail: React.FC = () => {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6" data-aos="fade-up" data-aos-delay="300">
+            <div
+              className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6"
+              data-aos="fade-up"
+              data-aos-delay="300"
+            >
               <div>
                 <h3 className="text-lg font-semibold text-gray-900 mb-3">
                   Informações de Contato
@@ -137,18 +157,6 @@ const ComercioDetail: React.FC = () => {
                       {comercio.telefone}
                     </a>
                   </div>
-
-                  {comercio.email && (
-                    <div className="flex items-center space-x-3">
-                      <Mail className="h-5 w-5 text-gray-400 flex-shrink-0" />
-                      <a
-                        href={`mailto:${comercio.email}`}
-                        className="text-gray-600 hover:text-blue-600"
-                      >
-                        {comercio.email}
-                      </a>
-                    </div>
-                  )}
 
                   {comercio.website && (
                     <div className="flex items-center space-x-3">
@@ -177,6 +185,7 @@ const ComercioDetail: React.FC = () => {
 
                 {(comercio.instagram ||
                   comercio.facebook ||
+                  comercio.mapa ||
                   comercio.whatsapp) && (
                   <div>
                     <h3 className="text-lg font-semibold text-gray-900 mb-3">
@@ -209,6 +218,14 @@ const ComercioDetail: React.FC = () => {
                           <Facebook className="h-5 w-5" />
                         </button>
                       )}
+                      {comercio.mapa && (
+                        <button
+                          onClick={handleMapClick}
+                          className="flex items-center justify-center p-3 bg-gradient-to-r from-green-500 to-blue-500 text-white rounded-lg hover:from-green-600 hover:to-blue-600 transition-colors"
+                        >
+                          <Map className="h-5 w-5" />
+                        </button>
+                      )}
                     </div>
                   </div>
                 )}
@@ -233,7 +250,11 @@ const ComercioDetail: React.FC = () => {
               </div>
             )}
 
-            <div className="flex space-x-4 pt-6 border-t border-gray-200" data-aos="fade-up" data-aos-delay="500">
+            <div
+              className="flex space-x-4 pt-6 border-t border-gray-200"
+              data-aos="fade-up"
+              data-aos-delay="500"
+            >
               <a
                 href={`tel:${comercio.telefone}`}
                 className="flex-1 bg-blue-600 text-white text-center py-3 rounded-lg hover:bg-blue-700 transition-colors font-medium"
