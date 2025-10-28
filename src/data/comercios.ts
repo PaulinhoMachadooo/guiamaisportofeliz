@@ -126,6 +126,7 @@ export const comercios: Comercio[] = [
     facebook: "pizzariasurreal",
     instagram: "@pizzariasurreall",
     whatsapp: "15996552341",
+    tipoAnuncio: "pago",
   },
   // animais - pet shop
   {
@@ -157,16 +158,17 @@ export const comercios: Comercio[] = [
     facebook: "Fran-Pet-61553915347534/?locale=pt_BR",
     instagram: "@franpet.banhoetosa",
     whatsapp: "15997448363",
+    tipoAnuncio: "pago",
   },
   // serviços - extintores
   {
     id: "md-extintores",
     nome: "MD Extintores",
     categoria: "servicos",
-    descricao: "Serviços de manutenção e recarga de extintores.",
-    endereco: "Rua Armando Salles de Oliveira, 130 - Vila Progresso",
+    descricao: "A primeira de Porto Feliz, especializada em extintores.",
+    endereco: "Rua Armando de Salles Oliveira, 130 - Vila Progresso",
     telefone: "(15) 99747-7510",
-    horarios: "Seg-Sex: 08:00 às 17:00,\nSáb-Dom: 08:00 Fechado",
+    horarios: "Seg-Sex: 08:00 às 17:00,\nSáb-Dom: Fechado",
     avaliacao: 4.8,
     totalAvaliacoes: 247,
     imagem:
@@ -174,8 +176,8 @@ export const comercios: Comercio[] = [
     galeria: [
       "https://lh3.googleusercontent.com/pw/AP1GczMekeYTSi263NVJnsv0ZiOEGcknt63G-aP2l6IKcRYOpSTtr_fC-g9dwgvlQTJVF8YLijRaO_qQaqPRNFvHsLqRpZ8UUGouD-P19BJTFw7cvFcArqLG9dNnhsdVxVO4a_Fd80N9fZ0FQKvBTqWkP1HD=w648-h540-s-no-gm?authuser=4",
       "https://lh3.googleusercontent.com/pw/AP1GczNvsE23vidGi1aiDgQoa5nBQbqARgAujCcqjCL5kdJrYdlswyG6R6nj-FD1-1PbHkY_Wb-wLbOByVZOuf1Qqo31tbjfjp5IZcCerzA2TbnQGhZe4hFV0ufuszXKh_qT6mi3-JouPKb6XPX71eMVOlDF=w720-h722-s-no-gm?authuser=4",
-      "https://lh3.googleusercontent.com/pw/AP1GczOmzpXV_Z4b0EXrDxAs2lORjQSIvuuN00Nsai3ilfXNPgqhPSfXn1lZq-up2sj7--XBDDosFubOsk_N72R59CKEitPJZ_eFvQ4GPX5twuNvAnrmGfioM986nT66Ke6P88vfcSil4AgNAxkgrQHKwZI_=w502-h912-s-no-gm?authuser=4",
-      "https://lh3.googleusercontent.com/pw/AP1GczPw1N_QXvci81umn2REG8LSw19YOLCDHeTBvY1-K_dI_--xiBKXZXQE0mEFrrHEZxcUlBaS2GSULHICEs9NMNgTiGKntaIqiglJHLKM-2VLd9G4YdDQBGVfquKWvoMOw9xqkPym4V_8DNW8MslOtlR9=w456-h912-s-no-gm?authuser=4",
+      "https://lh3.googleusercontent.com/pw/AP1GczPNZ99m4gOnKoGrtpPpKj5WU9OxOsyvOj2ZXVs2f2YgfDMVoB9wf7LRoHTf-oAqvpzH6pOkoBgL_xbGoUVpqeLzysMq9vRW_YHU6QNDghDkhLSujYook62vTb-of3YHjDPSnXWQledOfw5eN65osWK2=w720-h768-s-no-gm?authuser=4",
+      "https://lh3.googleusercontent.com/pw/AP1GczNpG3bZSaXWlqb3bkBRathsrBdvTBvnxCCRYy9LDb3EaFLAf-lTX3G1j0R3g3rXrIeyMQd_-O7grF9yxENdpVyD5vET6tQMFAjKipWchQ0vrYelZqChnA-KAnkc8nML5zDOM_enI9oUzTvwwO1s3Nzv=w405-h709-s-no-gm?authuser=4",
     ],
     especialidades: [
       "Manutenção",
@@ -184,10 +186,80 @@ export const comercios: Comercio[] = [
       "Sinalização",
       "EPIs",
       "Treinamentos",
+      "Alvará do Bombeiro",
     ],
     instagram: "@mdextintores",
     facebook: "/md.extintores.2025",
     whatsapp: "15997477510",
+    tipoAnuncio: "pago",
+  },
+  {
+    id: "jz-embelezamento-automotivo",
+    nome: "JZ Embelezamento Automotivo",
+    categoria: "servicos",
+    descricao: "Excelência em serviços de Limpeza e Higiene.",
+    endereco: "Rua Newton Prado, Centro",
+    telefone: "(15) 99850-1620",
+    horarios: "Seg-Sex: 08:00 às 17:00,\nSáb-Dom:Fechado",
+    avaliacao: 1.8,
+    totalAvaliacoes: 247,
+    imagem:
+      "https://lh3.googleusercontent.com/pw/AP1GczO3fvZ8FYPTT1TdjcDpGMWBEu1oQ53-Ew9YoeLkH2NY3a_18Hj6Cbj5tSPOpVxsyBNA1viyaFU7BoUXSf1rdpu54FZiIoh1toTDbsOC0Dsv9WdoAvtPobRnL8GofgnF4ZtcYdjkpeJi6Qs25C126RKB=w905-h905-s-no-gm?authuser=4",
+    galeria: [
+      "https://lh3.googleusercontent.com/pw/AP1GczMKwXb6LwyVTVQCOjemRu7MoAUcrZf6PvtN8A-RimcidhyxA_xwMiRkb2NBlbSt6nJ20hqOAbi-ea1zYi1kxNyMcFb1QO4rATBhsDqn0vU2TMWlUYbB6_FmfJmcYHp5ltfR1mL6lIBDOFnF4OO9Prl1=w905-h905-s-no-gm?authuser=4",
+      "https://lh3.googleusercontent.com/pw/AP1GczMkdmi0Sc_YSf1MJliNTNrKr8GYUp-WHTGFmvKGMs22lr8gwlXTAeyaVgM1iEYuIqpav8GvZvLWkpw4TOrAE2797zZF3IU72PPUXeWTnT8E-IupICRlhHZORhJ8GUSkOIuo_WpNLcpr1Rbxm-_glqJx=w905-h905-s-no-gm?authuser=4",
+      "https://lh3.googleusercontent.com/pw/AP1GczMvxusU6Jucai_fKyOVINbOqK28XZY5joWagqG3CEFFNHtvbahtd4VxmIPl3ZggFlJTpMgQwUIk4i6L_1eTt020oYqbd0Rlg8biM9PhOdNnwUv1Q2sWNHv3jkJznvIFgo9Pz31MGU_pd8ovxzikyqd-=w679-h905-s-no-gm?authuser=4",
+      "https://lh3.googleusercontent.com/pw/AP1GczM6qrPiipLyCKwx-02M0_BsB2MBOC9Q61wHMXVDjxFzsNVxdecswiSV94JzUBCfQIMIkdRX4Ukr1vThw9AO0h_2KmyXVqrKfSDmroLBY7Etm7KStCivMdrPIUTSfRW72CBUKCUXyAat1cq10auxx1w2=w905-h905-s-no-gm?authuser=4",
+    ],
+    especialidades: [
+      "Lava Rápido",
+      "Limpeza Simples",
+      "Limpeza Completa",
+      "Higienização Interna",
+      "Lavagem Técnica do Motor",
+      "Revitalização da Pintura",
+      "Cristalização",
+      "Vitrificação",
+      "Revitalização do Couro",
+    ],
+    //instagram: "@mdextintores",
+    facebook: "/jzdetailer",
+    whatsapp: "15998501620",
+    tipoAnuncio: "pago",
+  },
+  {
+    id: "fonseca-projetos",
+    nome: "Fonseca Projetos",
+    categoria: "servicos",
+    descricao: "Segurança e Conformidade Profissional.",
+    endereco: "",
+    telefone: "(15) 99115-6870",
+    horarios: "Seg-Sex: 24h ,\nSáb: 08:00 às 17:00,\nDom: Fechado",
+    avaliacao: 4.9,
+    totalAvaliacoes: 300,
+    imagem:
+      "https://lh3.googleusercontent.com/pw/AP1GczO5n7KjMOIGJu4fzqlUSsJwgrkRCv7jhMqNr3ZsDeVkAgYnnOs4Bz3VaHkF7EJtlZ64f_tK9te354VBgw_I1QwncHnscXnIE6zpfBT2B5STnHjewrECUNplouWnyBBvyvwOJ7efrlPQvDZP_33EDllm=w1024-h674-s-no-gm?authuser=4",
+
+    galeria: [
+      "https://lh3.googleusercontent.com/pw/AP1GczPsoWfwwWl6avWT3tyKHy4khlpbO3GZrk1et0kYV2QQ335vQ7MSTWp77TAmcy6mNpZ21WZ4TvDlCIi7M4FFVzZIoBUt_v5NiiAC3UyPz3RrA1jXbR9WWmn_xCw31oio2Lyab5uHo4xLVo7ShNb2UQLS=w679-h905-s-no-gm?authuser=4",
+      "https://lh3.googleusercontent.com/pw/AP1GczPuSOt7dRwi2OuO0IZyYnUAqzXvO-5Ql7pvV18CnIlDVUpu_t7RFi4LK_ORu8WsrMxGqDyFjkwHMCm7SzBHp4mCCymJwYx2GZ0JQq-CjxRBIvQ_zeN0c7MCBCtNhiERUj_4brR6qRpjRs3nm8puvbwA=w1207-h905-s-no-gm?authuser=4",
+      "https://lh3.googleusercontent.com/pw/AP1GczNnKfxeXlhWER25nRjQfVt6e8FznWMWqtD0UZaIw4dhuXFtQOd5hKUikLGodZF92PsvOMQVD4EKvsL44QHiNz-rA76ODxlEiT9lxJIcIVVgh7_N_9Oy90cmJgBLkCdu53RmjMdsz0U4ayuHsT0m17_U=w407-h905-s-no-gm?authuser=4",
+      "https://lh3.googleusercontent.com/pw/AP1GczMUOZLbE4ftHd7KBtHswEemEjI2PqzIdWnkWDJ6WjVYReWlQadg7153kI6rMKU35Tnmu4v_aWz9865qSNoseVuqRUbCVwPO9Nx4NPCujqFYZzWuFcuGjts6z3UYLrjEvz7xxifmQ_as4PkrEYg4q8sA=w905-h905-s-no-gm?authuser=4",
+    ],
+    especialidades: [
+      "AVCB",
+      "CLCB",
+      "SPDA",
+      "CETESB",
+      "PCMSO",
+      "PGR",
+      "LTCAT",
+      "NRs",
+      "Laudos Técnicos",
+    ],
+    instagram: "@projetos.fonseca",
+    whatsapp: "159991156870",
+    tipoAnuncio: "pago",
   },
   //varejo moveis planejados
   {
@@ -197,11 +269,11 @@ export const comercios: Comercio[] = [
     descricao: "Loja de móveis e decoração com estilo.",
     endereco: "Avenida Getúlio Vargas, 271 - Bambu",
     telefone: "(15) 99713-9132",
-    horarios: "Seg-Sex: 9:00 às 18:00,\nSáb: 08:00 às 12:00\nDom: Fechado",
-    avaliacao: 4.8,
-    totalAvaliacoes: 247,
+    horarios: "Seg-Sex: 9:00 às 18:00,\nSáb: 08:00 às 12:00,\nDom: Fechado",
+    avaliacao: 5.0,
+    totalAvaliacoes: 500,
     imagem:
-      "https://lh3.googleusercontent.com/pw/AP1GczNy8AbQi5jPjNGedNlIRVzpPTKP6ZzqaAz8yVQlhz_9o9Ww6PJxwRwCJDrHMaJCJhleynS_n-chAEwLAu4vPaMhJFmYvY5tW4yEWwYuwDrgd8rHEo34tHdAENG0Tbg7ima8Q1_TxqLgfw-ClJNPlm71=w858-h858-s-no-gm?authuser=4",
+      "https://lh3.googleusercontent.com/pw/AP1GczOIYGLwrvL2kHItmfrYyqE_zXvLPSRDYA6QtunTeJIeR8aVLunKVwoql4trQGeodxle4PQ9o1kK0g9CMrb9vXe9Tt5R4DXT1Iw5kZ5R-kgf8-K59winbDVhRobqzy_bc11XuBH9J229NuQY98hN4ldf=w1080-h771-s-no-gm?authuser=4",
     galeria: [
       "https://lh3.googleusercontent.com/pw/AP1GczMQMUjKEyOVy13n4-Va5TyvENtVlBXLYanTpHJJjdvxnCott7nDn7_s2xUFsnS_0tKcxYwunP15yQET5QS-b7bLJvcp_jToZZUGdgeJNMsqvOpvN1iMImiSXACp9e0STHlL353vJIv5zEpp4OJvMf5J=w513-h912-s-no-gm?authuser=4",
       "https://lh3.googleusercontent.com/pw/AP1GczOYd9o_NLAL5uO48hZgF3weUHwSopQ2SqjvAcjssjIuXUjhU0X_EcDPc3CDiDLakeYbQgu5fn2-D45Vmno_fLq3V63aThJzTqGIBEPOQKvHW5ckRJn0H3pkRha99V7sGJ12lfAa-8u4x1Rezo3RvtMh=w858-h483-s-no-gm?authuser=4",
@@ -209,6 +281,7 @@ export const comercios: Comercio[] = [
       "https://lh3.googleusercontent.com/pw/AP1GczNvruF7KeC3gZCBA_rf-tNpJ44BKRdMMaOYxQ7yOVLjgYmxpirMhMBcVndpPKF7QJiQkdoCubsMMDRjTn0tOXx4unXQVGyFVIr2b41py9DKSWqWttDLZrned-WXr1B36vRfUz7oZ_54gCTwE4v7k4Bd=w684-h912-s-no-gm?authuser=4",
     ],
     especialidades: [
+      "Móveis Planejados",
       "Móveis Sob Medida",
       "Serralheria",
       "Vidros",
@@ -216,7 +289,9 @@ export const comercios: Comercio[] = [
       "Montagem e instalação",
     ],
     instagram: "@moveparportofeliz",
+    facebook: "movepar.portofeliz",
     whatsapp: "15997139132",
+    tipoAnuncio: "pago",
   },
   // varejo tapeçaria
   {
@@ -245,5 +320,52 @@ export const comercios: Comercio[] = [
     ],
     facebook: "marcelo.antunes.585",
     whatsapp: "15997589870",
+    tipoAnuncio: "pago",
+  },
+  // Exemplos de anúncios gratuitos
+  {
+    /*
+    {
+    id: "padaria-central",
+    nome: "Padaria Central",
+    categoria: "alimentacao",
+    descricao: "Padaria tradicional no centro da cidade",
+    endereco: "Rua das Flores, 123 - Centro",
+    telefone: "(15) 3261-1234",
+    horarios: "Seg-Dom: 06:00 às 20:00",
+    avaliacao: 4.2,
+    totalAvaliacoes: 45,
+    imagem:
+      "https://images.pexels.com/photos/1070946/pexels-photo-1070946.jpeg?auto=compress&cs=tinysrgb&w=800",
+    tipoAnuncio: "gratuito",
+  },
+  {
+    id: "farmacia-popular",
+    nome: "Farmácia Popular",
+    categoria: "saude",
+    descricao: "Medicamentos e produtos de saúde",
+    endereco: "Av. Principal, 456 - Centro",
+    telefone: "(15) 3261-5678",
+    horarios: "Seg-Sex: 08:00 às 18:00",
+    avaliacao: 4.0,
+    totalAvaliacoes: 32,
+    imagem:
+      "https://images.pexels.com/photos/305568/pexels-photo-305568.jpeg?auto=compress&cs=tinysrgb&w=800",
+    tipoAnuncio: "gratuito",
+  },
+  {
+    id: "mercadinho-do-bairro",
+    nome: "Mercadinho do Bairro",
+    categoria: "varejo",
+    descricao: "Produtos básicos e conveniência",
+    endereco: "Rua São João, 789 - Vila Progresso",
+    telefone: "(15) 99123-4567",
+    horarios: "Seg-Dom: 07:00 às 22:00",
+    avaliacao: 3.8,
+    totalAvaliacoes: 28,
+    imagem:
+      "https://images.pexels.com/photos/264636/pexels-photo-264636.jpeg?auto=compress&cs=tinysrgb&w=800",
+    tipoAnuncio: "gratuito",
+  },*/
   },
 ];

@@ -1,12 +1,15 @@
-import React, { useState } from 'react';
-import { ChevronLeft, ChevronRight, X } from 'lucide-react';
+import React, { useState } from "react";
+import { ChevronLeft, ChevronRight, X } from "lucide-react";
 
 interface ImageGalleryProps {
   images: string[];
   businessName: string;
 }
 
-const ImageGallery: React.FC<ImageGalleryProps> = ({ images, businessName }) => {
+const ImageGallery: React.FC<ImageGalleryProps> = ({
+  images,
+  businessName,
+}) => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -28,9 +31,9 @@ const ImageGallery: React.FC<ImageGalleryProps> = ({ images, businessName }) => 
   };
 
   const handleKeyDown = (e: React.KeyboardEvent) => {
-    if (e.key === 'Escape') closeModal();
-    if (e.key === 'ArrowLeft') goToPrevious();
-    if (e.key === 'ArrowRight') goToNext();
+    if (e.key === "Escape") closeModal();
+    if (e.key === "ArrowLeft") goToPrevious();
+    if (e.key === "ArrowRight") goToNext();
   };
 
   if (!images || images.length === 0) return null;
@@ -39,7 +42,9 @@ const ImageGallery: React.FC<ImageGalleryProps> = ({ images, businessName }) => 
     <>
       {/* Gallery Grid */}
       <div className="mb-6">
-        <h3 className="text-lg font-semibold text-gray-900 mb-3">Galeria de Fotos</h3>
+        <h3 className="text-lg font-semibold text-gray-900 mb-3">
+          Galeria de Fotos
+        </h3>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-2">
           {images.map((image, index) => (
             <button
@@ -123,11 +128,6 @@ const ImageGallery: React.FC<ImageGalleryProps> = ({ images, businessName }) => 
                       e.stopPropagation();
                       setCurrentImageIndex(index);
                     }}
-                    className={`flex-shrink-0 w-16 h-16 rounded-lg overflow-hidden border-2 transition-all ${
-                      index === currentImageIndex
-                        ? 'border-white scale-110'
-                        : 'border-transparent opacity-70 hover:opacity-100'
-                    }`}
                   >
                     <img
                       src={image}

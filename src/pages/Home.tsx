@@ -67,6 +67,8 @@ const Home: React.FC = () => {
       .length;
   };
 
+  // Limitar categorias exibidas na home para 4
+  const categoriasLimitadas = categorias.slice(0, 4);
   return (
     <div className="min-h-screen bg-gray-50">
       <Header onSearch={handleSearch} />
@@ -79,7 +81,10 @@ const Home: React.FC = () => {
       </section>
 
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-[#112342] to-blue-900 text-white" data-aos="fade-up">
+      <section
+        className="bg-gradient-to-r from-[#112342] to-blue-900 text-white"
+        data-aos="fade-up"
+      >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
           <div className="text-center" data-aos="fade-up" data-aos-delay="200">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
@@ -103,17 +108,33 @@ const Home: React.FC = () => {
       {/* Categories Section */}
       <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12" data-aos="fade-up">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">
-              Categorias
-            </h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">
-              Explore diferentes tipos de estabelecimentos em nossa cidade
-            </p>
+          <div
+            className="flex items-center justify-between mb-12"
+            data-aos="fade-up"
+          >
+            <div>
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">
+                Categorias
+              </h2>
+              <p className="text-gray-600 max-w-2xl mx-auto">
+                Explore diferentes tipos de estabelecimentos em nossa cidade
+              </p>
+            </div>
+            <Link
+              to="/categorias"
+              className="text-blue-900 hover:text-blue-700 font-medium flex items-center"
+            >
+              Ver todos
+              <ArrowRight className="ml-1 h-4 w-4" />
+            </Link>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" data-aos="fade-up" data-aos-delay="300">
-            {categorias.map((categoria) => (
+          <div
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
+            data-aos="fade-up"
+            data-aos-delay="300"
+          >
+            {categoriasLimitadas.map((categoria) => (
               <CategoryCard
                 key={categoria.id}
                 categoria={categoria}
@@ -128,17 +149,16 @@ const Home: React.FC = () => {
 
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between mb-12" data-aos="fade-up">
+          <div
+            className="flex items-center justify-between mb-12"
+            data-aos="fade-up"
+          >
             <div>
               <div className="flex items-center space-x-2 mb-2">
                 <TrendingUp className="h-6 w-6 text-green-600" />
-                <h2 className="text-3xl font-bold text-gray-900">
-                  Destaque
-                </h2>
+                <h2 className="text-3xl font-bold text-gray-900">Destaque</h2>
               </div>
-              <p className="text-gray-600">
-                Os estabelecimentos em destaque
-              </p>
+              <p className="text-gray-600">Os estabelecimentos em destaque</p>
             </div>
             <Link
               to="/categorias"
@@ -149,7 +169,11 @@ const Home: React.FC = () => {
             </Link>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6" data-aos="fade-up" data-aos-delay="200">
+          <div
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
             {topRatedComercios.map((comercio) => (
               <ComercioCard key={comercio.id} comercio={comercio} />
             ))}
@@ -173,7 +197,11 @@ const Home: React.FC = () => {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" data-aos="fade-up" data-aos-delay="200">
+            <div
+              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+              data-aos="fade-up"
+              data-aos-delay="200"
+            >
               {filteredComercios.map((comercio) => (
                 <ComercioCard key={comercio.id} comercio={comercio} />
               ))}
@@ -215,11 +243,18 @@ const Home: React.FC = () => {
               >
                 Categorias
               </Link>
+              {/*<Link
+                to="/cidade"
+                className="text-gray-400 hover:text-white transition-colors"
+              >
+                Cidade
+              </Link>*/}
             </div>
           </div>
         </div>
       </footer>
     </div>
+    
   );
 };
 

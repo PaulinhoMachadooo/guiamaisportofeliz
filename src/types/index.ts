@@ -5,17 +5,18 @@ export interface Comercio {
   descricao: string;
   endereco: string;
   telefone: string;
-  //email?: string;
+  email?: string;
   website?: string;
   horarios: string;
-  //avaliacao: number;
-  //totalAvaliacoes: number;
+  avaliacao: number;
+  totalAvaliacoes: number;
   imagem: string;
+  galeria?: string[];
   especialidades?: string[];
   instagram?: string;
   facebook?: string;
   whatsapp?: string;
-  mapa?: string;
+  tipoAnuncio: 'gratuito' | 'pago';
 }
 
 export interface Categoria {

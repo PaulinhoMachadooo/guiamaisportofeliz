@@ -10,7 +10,6 @@ import {
   Instagram,
   Facebook,
   MessageCircle,
-  Map,
 } from "lucide-react";
 import * as Icons from "lucide-react";
 import { useParams } from "react-router-dom";
@@ -32,6 +31,33 @@ const ComercioDetail: React.FC = () => {
               Estabelecimento não encontrado
             </h1>
             <Link to="/" className="text-blue-600 hover:text-blue-700">
+              Voltar ao início
+            </Link>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
+  // Redirecionar anúncios gratuitos para home
+  if (comercio.tipoAnuncio === "gratuito") {
+    return (
+      <div className="min-h-screen bg-gray-50">
+        <Header />
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+          <div className="text-center">
+            <h1 className="text-2xl font-bold text-gray-900 mb-4">
+              Página não disponível
+            </h1>
+            <p className="text-gray-600 mb-6">
+              Este é um anúncio gratuito. Para mais informações, entre em
+              contato diretamente.
+            </p>
+            <Link
+              to="/"
+              className="inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+            >
+              <ArrowLeft className="h-4 w-4 mr-2" />
               Voltar ao início
             </Link>
           </div>
@@ -64,18 +90,10 @@ const ComercioDetail: React.FC = () => {
       window.open(`https://facebook.com/${comercio.facebook}`, "_blank");
     }
   };
-  const handleMapClick = () => {
-    if (comercio.mapa) {
-      window.open(
-        `https://www.google.com/maps/search/?api=1&query=${comercio.mapa}`,
-        "_blank"
-      );
-    }
-  };
 
   return (
     <div className="min-h-screen bg-gray-50">
-      <Header />
+      {/*<Header />*/}
 
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <Link
@@ -83,8 +101,8 @@ const ComercioDetail: React.FC = () => {
           to="/"
           className="inline-flex items-center text-gray-600 hover:text-gray-900 mb-6"
         >
-          <ArrowLeft className="h-4 w-4 mr-2" />
-          Voltar
+          {/*<ArrowLeft className="h-4 w-4 mr-2" />
+          Voltar*/}
         </Link>
 
         <div
@@ -158,6 +176,18 @@ const ComercioDetail: React.FC = () => {
                     </a>
                   </div>
 
+                  {comercio.email && (
+                    <div className="flex items-center space-x-3">
+                      <Mail className="h-5 w-5 text-gray-400 flex-shrink-0" />
+                      <a
+                        href={`mailto:${comercio.email}`}
+                        className="text-gray-600 hover:text-blue-600"
+                      >
+                        {comercio.email}
+                      </a>
+                    </div>
+                  )}
+
                   {comercio.website && (
                     <div className="flex items-center space-x-3">
                       <Globe className="h-5 w-5 text-gray-400 flex-shrink-0" />
@@ -185,7 +215,6 @@ const ComercioDetail: React.FC = () => {
 
                 {(comercio.instagram ||
                   comercio.facebook ||
-                  comercio.mapa ||
                   comercio.whatsapp) && (
                   <div>
                     <h3 className="text-lg font-semibold text-gray-900 mb-3">
@@ -216,14 +245,6 @@ const ComercioDetail: React.FC = () => {
                           className="flex items-center justify-center p-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
                         >
                           <Facebook className="h-5 w-5" />
-                        </button>
-                      )}
-                      {comercio.mapa && (
-                        <button
-                          onClick={handleMapClick}
-                          className="flex items-center justify-center p-3 bg-gradient-to-r from-green-500 to-blue-500 text-white rounded-lg hover:from-green-600 hover:to-blue-600 transition-colors"
-                        >
-                          <Map className="h-5 w-5" />
                         </button>
                       )}
                     </div>
