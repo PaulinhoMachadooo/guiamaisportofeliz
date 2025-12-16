@@ -16,13 +16,10 @@ export interface Comercio {
   instagram?: string;
   facebook?: string;
   whatsapp?: string;
-  tipoAnuncio: 'gratuito' | 'pago';
+  tipoAnuncio: "gratuito" | "pago";
 }
 
 export interface Categoria {
   id: string;
   nome: string;
-  icone: string;
-  cor: string;
-  descricao: string;
 }

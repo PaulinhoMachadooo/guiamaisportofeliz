@@ -96,14 +96,14 @@ const ComercioDetail: React.FC = () => {
       {/*<Header />*/}
 
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <Link
+        {/*<Link
           data-aos="fade-right"
-          to="/"
+          to="/categorias"
           className="inline-flex items-center text-gray-600 hover:text-gray-900 mb-6"
         >
-          {/*<ArrowLeft className="h-4 w-4 mr-2" />
-          Voltar*/}
-        </Link>
+          <ArrowLeft className="h-4 w-4 mr-2" />
+          Voltar
+        </Link>*/}
 
         <div
           className="bg-white rounded-xl shadow-lg overflow-hidden"

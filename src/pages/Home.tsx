@@ -16,10 +16,8 @@ const Home: React.FC = () => {
 
     if (query.trim()) {
       // Buscar por categoria primeiro
-      const categoriaEncontrada = categorias.find(
-        (categoria) =>
-          categoria.nome.toLowerCase().includes(query.toLowerCase()) ||
-          categoria.descricao.toLowerCase().includes(query.toLowerCase())
+      const categoriaEncontrada = categorias.find((categoria) =>
+        categoria.nome.toLowerCase().includes(query.toLowerCase())
       );
 
       if (categoriaEncontrada) {
@@ -254,7 +252,6 @@ const Home: React.FC = () => {
         </div>
       </footer>
     </div>
-    
   );
 };
 

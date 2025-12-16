@@ -17,9 +17,9 @@ const ComercioCard: React.FC<ComercioCardProps> = ({ comercio }) => {
           <h3 className="text-lg font-semibold text-gray-900">
             {comercio.nome}
           </h3>
-          <span className="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded-full">
+          {/*<span className="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded-full">
             Gratuito
-          </span>
+          </span>*/}
         </div>
 
         <div className="space-y-2">
