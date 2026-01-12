@@ -3,7 +3,6 @@ import { Search } from "lucide-react";
 import Header from "../components/Header";
 import CategoryCard from "../components/CategoryCard";
 import { categorias, comercios } from "../data/comercios";
-import { Link, useParams } from "react-router-dom";
 
 const Categories: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState("");

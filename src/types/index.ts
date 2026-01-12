@@ -16,7 +16,7 @@ export interface Comercio {
   instagram?: string;
   facebook?: string;
   whatsapp?: string;
-  tipoAnuncio: "gratuito" | "pago";
+  tipoAnuncio: "gratuito" | "pago" | "pago_promocional";
 }
 
 export interface Categoria {

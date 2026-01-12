@@ -1,14 +1,29 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { useState } from "react";
 import { MapPin, Clock, Phone } from "lucide-react";
 import { Comercio } from "../types";
+import ComercioModal from "./ComercioModal";
 
 interface ComercioCardProps {
   comercio: Comercio;
 }
 
 const ComercioCard: React.FC<ComercioCardProps> = ({ comercio }) => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
   const isGratuito = comercio.tipoAnuncio === "gratuito";
+  const isPromocional = comercio.tipoAnuncio === "pago_promocional";
+
+  const handleCardClick = () => {
+    if (isPromocional) {
+      setIsModalOpen(true);
+    }
+  };
+
+  const handlePhoneClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
+  };
 
   if (isGratuito) {
     return (
@@ -17,9 +32,6 @@ const ComercioCard: React.FC<ComercioCardProps> = ({ comercio }) => {
           <h3 className="text-lg font-semibold text-gray-900">
             {comercio.nome}
           </h3>
-          {/*<span className="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded-full">
-            Gratuito
-          </span>*/}
         </div>
 
         <div className="space-y-2">
@@ -32,6 +44,7 @@ const ComercioCard: React.FC<ComercioCardProps> = ({ comercio }) => {
             <Phone className="h-4 w-4 mr-2 flex-shrink-0" />
             <a
               href={`tel:${comercio.telefone}`}
+              onClick={handlePhoneClick}
               className="hover:text-blue-600 transition-colors"
             >
               {comercio.telefone}
@@ -47,13 +60,8 @@ const ComercioCard: React.FC<ComercioCardProps> = ({ comercio }) => {
     );
   }
 
-  return (
-    <Link
-      to={`/comercio/${comercio.id}`}
-      className="group block bg-white rounded-xl shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1 overflow-hidden"
-      data-aos="fade-up"
-      data-aos-delay="150"
-    >
+  const CardContent = () => (
+    <div className="group block bg-white rounded-xl shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1 overflow-hidden">
       <div className="relative h-48 overflow-hidden">
         <img
           src={comercio.imagem}
@@ -107,7 +115,35 @@ const ComercioCard: React.FC<ComercioCardProps> = ({ comercio }) => {
           </span>
         </div>
       </div>
-    </Link>
+    </div>
+  );
+
+  return (
+    <>
+      {isPromocional ? (
+        <div onClick={handleCardClick} className="cursor-pointer">
+          <CardContent />
+        </div>
+      ) : (
+        <Link
+          to={`/comercio/${comercio.id}`}
+          onClick={handleCardClick}
+          data-aos="fade-up"
+          data-aos-delay="150"
+        >
+          <CardContent />
+        </Link>
+      )}
+
+      {/* Modal para anúncios promocionais */}
+      {isPromocional && (
+        <ComercioModal
+          comercio={comercio}
+          isOpen={isModalOpen}
+          onClose={() => setIsModalOpen(false)}
+        />
+      )}
+    </>
   );
 };
 

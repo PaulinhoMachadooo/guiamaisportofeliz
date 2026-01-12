@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import {
   ArrowLeft,
   MapPin,
@@ -19,7 +19,12 @@ import { comercios, categorias } from "../data/comercios";
 
 const ComercioDetail: React.FC = () => {
   const { id } = useParams<{ id: string }>();
+  const navigate = useNavigate();
   const comercio = comercios.find((c) => c.id === id);
+
+  const handleGoBack = () => {
+    navigate(-1);
+  };
 
   if (!comercio) {
     return (
@@ -30,7 +35,7 @@ const ComercioDetail: React.FC = () => {
             <h1 className="text-2xl font-bold text-gray-900 mb-4">
               Estabelecimento não encontrado
             </h1>
-            <Link to="/" className="text-blue-600 hover:text-blue-700">
+            <Link to="/" className="text-blue-950 hover:text-blue-950">
               Voltar ao início
             </Link>
           </div>
@@ -96,14 +101,14 @@ const ComercioDetail: React.FC = () => {
       {/*<Header />*/}
 
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        {/*<Link
+        <button
           data-aos="fade-right"
-          to="/categorias"
+          onClick={handleGoBack}
           className="inline-flex items-center text-gray-600 hover:text-gray-900 mb-6"
         >
           <ArrowLeft className="h-4 w-4 mr-2" />
           Voltar
-        </Link>*/}
+        </button>
 
         <div
           className="bg-white rounded-xl shadow-lg overflow-hidden"
